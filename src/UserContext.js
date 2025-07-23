@@ -9,6 +9,7 @@ export const UserProvider = ({ children }) => {
     { username: "Shahein", password: "456", id: "A002", role: "user" },
     { username: "Isuru", password: "789", id: "A003", role: "user" },
     { username: "Hashan", password: "258", id: "A004", role: "student" },
+    { username: "Test", password: "123", id: "A005", role: "student" },
   ]);
 
   return (
