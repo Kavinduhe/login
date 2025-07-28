@@ -8,6 +8,9 @@ import Login from "./Login";
 import User from "./user";
 import Student from "./student";
 import { UserProvider } from "./UserContext";
+import SignUp from "./SignUp";
+import PrivateRoute from "./PrivateRoute";
+import { RoleProvider } from "./RoleContext";
 
 function App() {
   return (
@@ -15,10 +18,17 @@ function App() {
       <UserProvider>
         <BrowserRouter>
           <Routes>
-            <Route index element={<Login />} />
+            <Route element = {<PrivateRoute />}>
+              <Route path="/User" element={<User />} />
+              <Route path="/Admin" element={<Admin />} />
+              <Route path="/Student" element={<Student />} />
+
+            </Route>
+            <Route path="/Login" element={<Login />} />
             <Route path="/Admin" element={<Admin />} />
             <Route path="/User" element={<User />} />
             <Route path="/Student" element={<Student />} />
+            <Route path="/SignUp" element={<SignUp />} />
           </Routes>
         </BrowserRouter>
       </UserProvider>

@@ -67,8 +67,13 @@ const Login = () => {
       <br></br>
 
       <button onClick={Login}>Log in</button>
+
+      <p>If You Don't have account Sign Up</p>
+      <button onClick={() => navigate("/SignUp")}>Sign Up</button>
+
     </div>
   );
 };
 
 export default Login;
+
